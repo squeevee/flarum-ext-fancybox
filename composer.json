@@ -5,7 +5,7 @@
     "require": {
         "flarum/core": "^0.1.0-beta.8"
     },
-    "license": "GPL3",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Ellie Hawk",
