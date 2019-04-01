@@ -1,0 +1,33 @@
+{
+    "name": "squeevee/flarum-ext-fancybox",
+    "description": "Image formatting and lightbox modal using FancyBox. (see https://fancyapps.com/fancybox)",
+    "type": "flarum-extension",
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ellie Hawk",
+            "email": "squeevee@yahoo.com"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/squeevee/flarum-ext-fancybox"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Fancybox",
+            "icon": {
+                "name": "far fa-image",
+                "backgroundColor": "#f2f2f2",
+                "color": "#be4bdb"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Squeevee\\Fancybox\\": "src/"
+        }
+    }
+}

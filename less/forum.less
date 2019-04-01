@@ -1,0 +1,121 @@
+/*  
+ *  FancyBox Extension for Flarum
+ *  Copyright (C) 2019 Eleanor Hawk
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ */
+
+@import (inline) "jquery.fancybox.css";
+
+#post-image() {
+    padding: 4px;
+    border-radius: 4px;
+    background-color: @control-bg;
+}
+
+.Post img.inline-image {
+    #post-image;
+    max-height: 120px;
+    max-width: 240px;
+    width: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.Post img.block-image {
+    #post-image;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 60%;
+}
+
+#extlink-badge() {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background-color: @control-bg;
+    text-align: center;
+    opacity: 0.6;
+
+    i {
+        color: @control-color;
+    }
+}
+
+.Post a.block-image-link {
+    display: block;
+    background-color: @control-bg;
+    border: none;
+    position: relative;
+    padding: 15px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    .extlink-badge {
+        #extlink-badge;
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        vertical-align: middle;
+    }    
+}
+
+.Post a.inline-image-link {
+    display: inline-block;
+    background-color: @control-bg;
+    border: none;
+    padding: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 4px;
+
+    img {
+        position: relative;
+        top: 4px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .extlink-badge {
+        #extlink-badge;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-left: 4px;
+    }
+}
+
+.Post a:hover .extlink-badge {
+    opacity: 1;
+}
+
+.fancybox-bg {
+    background-color: @overlay-bg;
+}
+.fancybox-is-open .fancybox-bg {
+    opacity: 1;
+}
+.fancybox-content {
+    .box-shadow(0 7px 15px @shadow-color);
+}
