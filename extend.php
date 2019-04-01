@@ -14,7 +14,7 @@
  *  GNU General Public License for more details.
  */
 
-namespace Squeevee\Fancybox;
+namespace Squeevee\FancyBox;
 
 use Flarum\Extend;
 
