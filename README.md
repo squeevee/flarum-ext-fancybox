@@ -19,8 +19,11 @@ images, and the file size / bandwidth usage are not affected.
 
 ## Installation
 
-This repository will soon be on Packagist, meaning that it will be able to be
-installed via a `composer` command. Stay tuned.
+Install this extension with Composer using the command
+
+```
+composer require squeevee/flarum-ext-fancybox
+```
 
 ## License
 

@@ -5,7 +5,7 @@
     "require": {
         "flarum/core": "^0.1.0-beta.8"
     },
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Ellie Hawk",
@@ -17,7 +17,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Fancybox",
+            "title": "FancyBox",
             "icon": {
                 "name": "far fa-image",
                 "backgroundColor": "#f2f2f2",
@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Squeevee\\Fancybox\\": "src/"
+            "Squeevee\\FancyBox\\": "src/"
         }
     }
 }
