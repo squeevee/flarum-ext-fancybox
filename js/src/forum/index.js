@@ -16,7 +16,7 @@
 import "@fancyapps/fancybox";
 
 import { extend } from 'flarum/extend';
-import Post from 'flarum/components/Post';
+import CommentPost from 'flarum/components/CommentPost';
 import ModalManager from 'flarum/components/ModalManager';
 
 function categorizeImages(element) {
@@ -54,7 +54,7 @@ app.initializers.add('fancybox', app => {
     ERROR: app.translator.trans('fancybox.forum.error')
   }
 
-  extend(Post.prototype, 'config', function(x, isInitialized, context) {
+  extend(CommentPost.prototype, 'config', function(x, isInitialized, context) {
     categorizeImages(this.element);
     if (!this.isEditing() && !('fancybox_gallery' in this)) {
       let images = $(this.element).find('img.inline-image,img.block-image').not('a *');

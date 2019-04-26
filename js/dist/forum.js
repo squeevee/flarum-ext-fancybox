@@ -5756,8 +5756,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fancyapps_fancybox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fancyapps_fancybox__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/extend */ "flarum/extend");
 /* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_extend__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var flarum_components_Post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/components/Post */ "flarum/components/Post");
-/* harmony import */ var flarum_components_Post__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_components_Post__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var flarum_components_CommentPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/components/CommentPost */ "flarum/components/CommentPost");
+/* harmony import */ var flarum_components_CommentPost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_components_CommentPost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var flarum_components_ModalManager__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/components/ModalManager */ "flarum/components/ModalManager");
 /* harmony import */ var flarum_components_ModalManager__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_components_ModalManager__WEBPACK_IMPORTED_MODULE_3__);
 /*  
@@ -5811,7 +5811,7 @@ app.initializers.add('fancybox', function (app) {
     PREV: app.translator.trans('fancybox.forum.prev'),
     ERROR: app.translator.trans('fancybox.forum.error')
   };
-  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_Post__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'config', function (x, isInitialized, context) {
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_CommentPost__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'config', function (x, isInitialized, context) {
     var _this = this;
 
     categorizeImages(this.element);
@@ -5853,6 +5853,17 @@ app.initializers.add('fancybox', function (app) {
 
 /***/ }),
 
+/***/ "flarum/components/CommentPost":
+/*!***************************************************************!*\
+  !*** external "flarum.core.compat['components/CommentPost']" ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['components/CommentPost'];
+
+/***/ }),
+
 /***/ "flarum/components/ModalManager":
 /*!****************************************************************!*\
   !*** external "flarum.core.compat['components/ModalManager']" ***!
@@ -5861,17 +5872,6 @@ app.initializers.add('fancybox', function (app) {
 /***/ (function(module, exports) {
 
 module.exports = flarum.core.compat['components/ModalManager'];
-
-/***/ }),
-
-/***/ "flarum/components/Post":
-/*!********************************************************!*\
-  !*** external "flarum.core.compat['components/Post']" ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['components/Post'];
 
 /***/ }),
 
