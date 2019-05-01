@@ -5783,12 +5783,18 @@ function categorizeImages(element) {
   $(element).find('p > img:not([class])').each(function (i, e) {
     if ($(e).parent().contents().length === 1) $(e).addClass('block-image');else $(e).addClass('inline-image');
   });
-  $(element).find('p a:not(.block-image-link,.inline-image-link) > img:not([class])').each(function (i, e) {
+  $(element).find('p a:not(.block-image-link,.inline-image-link,.block-image-self-link) > img:not([class])').each(function (i, e) {
     var link = $(e).parent();
 
     if (link.contents().length === 1 && link.parent().contents().length === 1) {
       $(e).addClass('block-image');
-      link.addClass('block-image-link');
+
+      if ($(e).attr('src') !== link.attr('href')) {
+        link.addClass('block-image-link');
+      } else {
+        link.addClass('block-image-self-link');
+        return;
+      }
     } else {
       $(e).addClass('inline-image');
       link.addClass('inline-image-link');
@@ -5815,9 +5821,12 @@ app.initializers.add('fancybox', function (app) {
     var _this = this;
 
     categorizeImages(this.element);
+    $(this.element).find('.block-image-self-link').click(function (e) {
+      return e.preventDefault();
+    });
 
     if (!this.isEditing() && !('fancybox_gallery' in this)) {
-      var images = $(this.element).find('img.inline-image,img.block-image').not('a *');
+      var images = $(this.element).find('img.inline-image,img.block-image').not('a.block-image-link *, a.inline-image-link *');
       var gallery = images.map(function (i, e) {
         return {
           src: e.getAttribute('src'),
