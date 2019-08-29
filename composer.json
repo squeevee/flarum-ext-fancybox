@@ -24,10 +24,5 @@
                 "color": "#be4bdb"
             }
         }
-    },
-    "autoload": {
-        "psr-4": {
-            "Squeevee\\FancyBox\\": "src/"
-        }
     }
 }
