@@ -51,6 +51,7 @@ function categorizeImages(element) {
 }
 
 app.initializers.add('fancybox', app => {
+  console.log("Fancy?")
   $.fancybox.defaults.toolbar = false;
   $.fancybox.defaults.lang = app.translator.locale;
   $.fancybox.defaults.i18n[app.translator.locale] = {
@@ -59,7 +60,8 @@ app.initializers.add('fancybox', app => {
     ERROR: app.translator.trans('fancybox.forum.error')
   }
 
-  extend(CommentPost.prototype, 'config', function(x, isInitialized, context) {
+  extend(CommentPost.prototype, 'oncreate', function(x, vnode) {
+    console.log('fancy!')
     categorizeImages(this.element);
     $(this.element).find('.block-image-self-link').click((e) => e.preventDefault());
     if (!this.isEditing() && !('fancybox_gallery' in this)) {

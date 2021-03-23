@@ -1,15 +1,19 @@
 {
     "name": "squeevee/flarum-ext-fancybox",
-    "description": "Image formatting and lightbox modal using FancyBox. (see https://fancyapps.com/fancybox)",
+    "description": "Image formatting (inline images) and lightbox modal using FancyBox. (see https://fancyapps.com/fancybox)",
     "type": "flarum-extension",
     "require": {
-        "flarum/core": "^0.1.0-beta.8"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Ellie Hawk",
             "email": "squeevee@yahoo.com"
+        },
+        {
+            "name": "Eddie Webbinaro",
+            "email": "eddie@webbinaro.dev"
         }
     ],
     "support": {
